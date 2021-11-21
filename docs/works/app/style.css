@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+ body {
+   background: black;
+ }
+
+ .header {
+     width: 80rem;
+     padding-left: 10rem;
+     padding-top: 5rem;
+     display: flex;
+ }
+ h1 {
+     color: lightgrey;
+     font-family: 'Libre Baskerville', serif;
+     font-size: 4rem;
+ }
+
+ .header p {
+     color: lightgrey;
+     font-family: 'Libre Baskerville', serif;
+     padding-top: 10rem;
+     font-size: 1.5rem;
+     line-height: 3rem;
+
+ }
+ .mainnav a {
+    text-decoration: none;
+    color: rgb(186, 186, 186);
+    font-family: 'Libre Baskerville', serif;
+    float: right;
+    padding: 1rem;
+    transition: all .3s ease-in-out;
+  }
+ 
+  .mainnav a:hover {
+    color: white;
+    text-shadow: 0 0 .1rem;
+  }
+
+  p {
+      color: lightgrey;
+      font-family: 'Libre Baskerville', serif;
+      line-height: 2rem;
+      width: 30rem;
+  }
+
+ .one {
+     position: relative;
+     top: 25rem;
+     left: 10rem;
+     width: fit-content;
+ }
+
+ .one img {
+     width: 500px;
+     height: 500px;
+ }
+
+ .two {
+     position: relative;
+     top: 40rem;
+     right: -70rem;
+     width: fit-content;
+ }
+ .two img {
+     width: 500px;
+     height: 700px;
+ }
+
+ .three {
+     position: relative;
+     top: 40rem;
+ }
+ .three img {
+     width: 700px;
+     height: 500px;
+ }

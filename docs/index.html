@@ -4,35 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Portfolio</title>.
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
 </head>
 <body>
-    <h1>Yuan Shen Homepage</h1>
-    <nav class="main-nav">
-        <a href="works">Works</a>
-        <a href="about">About</a>
-        <a href="contact">Contact</a>    
-    </nav>
-    
+    <div class="gallery-main">
+        <a href="works/app/index.html">
+            <img src="assets/images/UI_mockup_3_stacked  crop.jpg" alt="ui/ux">
+        </a>
+        <a href="works/book/index.html">
+            <img src="assets/images/book_design_gallery_img.jpg" alt="book">
+        </a>
+        <a href="works/illustration/index.html">
+            <img src="assets/images/collage_gallery_img.jpg" alt="collage">
+        </a>
+        <a href="works/poem/index.html">
+            <img src="assets/images/poetry_gallery_img.jpg" alt="poetry">
+        </a>
+        <a href="works/book/index.html">
+        <img src="assets/images/gd_gallery_img.jpg" alt="graphic">
+        </a>
+        <a href="">
+            <img src="https://picsum.photos/id/100/800/800" alt="">
+        </a>
+        <a href="">
+            <img src="https://picsum.photos/id/101/800/800" alt="">
+        </a>
+        <a href="">
+            <img src="https://picsum.photos/id/102/800/800" alt="">
+        </a>
+        <a href="">
+            <img src="https://picsum.photos/id/103/800/800" alt="">
+        </a>
+        
+    </div>
+    <div class="mainnav">
+        <a href="about/index.html">About</a>
+        <a href="">Home</a>
+    </div>
 
-    <div class="cursor"></div>  
-       
-    
-    
-    <script>
-        const cursor = document.querySelector('.cursor');
-
-        document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-        })
-
-        document.addEventListener('click', () => {
-            cursor.classList.add("expand");
-            setTimeout(() => {
-                cursor.classList.remove("expand");
-            }, 500)
-        })
-    </script>
 </body>
 </html>
