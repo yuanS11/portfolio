@@ -62,7 +62,10 @@
    top: 30rem;
    float: right;
    right: 5rem;
-   width: fit-content;
+}
+
+.two img {
+    width: 700px;
 }
 
 
@@ -77,4 +80,17 @@
     top: 40rem;
     float: right;
     right: 10rem;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
 }

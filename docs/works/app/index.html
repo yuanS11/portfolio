@@ -14,22 +14,42 @@
     </div>
     <div class="header">
         <h1>UI/UX</h1> 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur in consequatur error? Tempora cupiditate, voluptate debitis quaerat fugit aliquid, officia delectus, ipsum quam cumque magni provident. Expedita error ad a!</p>
+        <p>A case study focusing on a shampoo cutomizing app. The background being the more and more prevalance problem with hair loss in younger generation.</p>
     </div>
     <div class="images">
-        <div class="one">
+        <div class="one reveal">
             <img src="../../assets/images/UI_mockup_3_stacked .jpg" alt="Trulli">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, accusantium accusamus. Reprehenderit cupiditate quos cumque optio rem nisi voluptas soluta.</p>
+            <p>This app consists of many features. A hair quiz, your personal records, and a tips section.</p>
         </div>
-        <div class="two">
-            <img src="https://picsum.photos/id/330/500/700" alt="Trulli">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit incidunt culpa aut enim quia provident repellendus ratione hic dignissimos ducimus, doloremque neque illum tempore maxime rem porro pariatur voluptate numquam!</p>
+        <div class="two reveal">
+            <img src="../../assets/images/UI_mockup_survey copy.jpg" alt="Trulli">
+            <p>Users will first take a quiz on their hair conditions and hair needs. The app would then generate a personalized customizable formula for Users.</p>
         </div>
-        <div class="three">
+        <div class="three reveal">
             <img src="https://picsum.photos/id/300/700/500" alt="Trulli">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, amet beatae. Natus similique dolorem suscipit aliquam rem quo fuga nesciunt.</p>
+            <p>This app also saves all quiz results and past orders for easy re-ordering.</p>
         </div>
     </div>
     
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal')
+
+        for(var i = 0; i < reveals.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+            }
+            else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    </script>
 </body>
 </html>

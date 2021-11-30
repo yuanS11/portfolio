@@ -14,25 +14,46 @@
     </div>
     <div class="header">
         <h1>Graphic</h1> 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam molestias facilis eius dolorem. Repudiandae alias, deleniti laudantium, incidunt hic voluptate, voluptatibus quaerat atque nisi doloremque modi quas necessitatibus. Hic, ratione! Magnam magni recusandae cupiditate provident incidunt, ea fuga minus sit quidem commodi reiciendis, eveniet laboriosam. Quisquam ad ipsum voluptatum facere.</p>
+        <p>Graphic Design is my main focus. <br> Works here include book design, poster design, cover design.</p>
     </div>
     <div class="images">
-        <div class="one">
+        <div class="one reveal">
             <img src="https://picsum.photos/id/50/500/600" alt="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est aliquam magnam distinctio aspernatur, voluptatum animi?</p>
+            <p>Book design project. A book designed to introduce artist____.</p>
         </div>
-        <div class="two">
-            <img src="https://picsum.photos/id/51/700/500" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nisi dolores nihil ab sit exercitationem. Deleniti qui quam cum porro!</p>
+        <div class="two reveal">
+            <img src="../../assets/images/dave brubeck mock up copy.jpg" alt="">
+            <p>Poster design project. Dave Brubeck concert.</p>
         </div>
-        <div class="three">
+        <div class="three reveal">
             <img src="https://picsum.photos/id/52/500/700" alt="">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, doloremque.</p>
+            <p>Book design project. Exhibition at the Art Institute, "Shaping Air".</p>
         </div>
-        <div class="four">
+        <div class="four reveal">
             <img src="https://picsum.photos/id/53/500/500" alt="">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut dolorum ratione! Reiciendis libero voluptas, voluptatibus quod maiores impedit. Animi qui velit veritatis maxime delectus.</p>
         </div>
     </div>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal')
+
+        for(var i = 0; i < reveals.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+            }
+            else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    </script>
 </body>
 </html>
