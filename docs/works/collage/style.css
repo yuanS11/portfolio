@@ -8,27 +8,66 @@
  }
 
  .header {
-    width: 80rem;
-    padding-left: 10rem;
-    padding-top: 5rem;
-    display: flex;
-}
-h1 {
-    color: lightgrey;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 4rem;
+     width: 80rem;
+     padding-left: 10rem;
+     padding-top: 5rem;
+     display: flex;
+     flex-wrap: wrap;
+ }
+ h1 {
+     color: lightgrey;
+     font-family: 'Libre Baskerville', serif;
+     font-size: 4rem;
+     flex: 50%;
+ }
+
+ .header p {
+     color: lightgrey;
+     font-family: 'Libre Baskerville', serif;
+     padding-top: 10rem;
+     font-size: 2rem;
+     line-height: 3rem;
+     flex:50%;
+
+ }
+
+ @media screen and (max-width: 1200px) {
+     .header {
+         display: flex;
+         width: 600px;
+     }
+     h1 {
+         height: 100px;
+         width: 500px;
+         font-size: 3rem;
+         flex:100%;
+     }
+
+     .two{
+         position: absolute;
+         left: 0;
+         flex: 100%
+     }
+     
+ }
+
+@media (max-width:600px) {
+    .header {
+        display: block;
+        width: 300px;
+        padding-left: 80px;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .header p {
+        font-size: 2rem;
+        padding-top: 0;
+        width: 300px;
+    }
 }
 
-.header p {
-    color: lightgrey;
-    font-family: 'Libre Baskerville', serif;
-    padding-top: 10rem;
-    font-size: 1.5rem;
-    line-height: 3rem;
-
-}
-
-.mainnav a {
+ .mainnav a {
     text-decoration: none;
     color: rgb(186, 186, 186);
     font-family: 'Libre Baskerville', serif;
@@ -40,4 +79,63 @@ h1 {
   .mainnav a:hover {
     color: white;
     text-shadow: 0 0 .1rem;
+  }
+
+  p {
+      color: lightgrey;
+      font-family: 'Libre Baskerville', serif;
+      line-height: 2rem;
+     
+  }
+
+  .images {
+      padding-top: 20rem;
+      max-width: 1000px;
+      margin:auto;  
+      
+  }
+
+  .images div {
+      padding: 5rem;
+  }
+
+  .images img {
+      width: 100%;
+      max-width: 1000px;
+      min-width: 300px;
+  }
+
+  .images p {
+      font-size: 1.5em;
+      word-wrap: break-word;
+      line-height: 3rem;
+  }
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 80%);
+    display: none;
+  }
+  
+  #lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

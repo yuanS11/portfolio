@@ -5,9 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="../collage/script.js"></script>
     <title>illustration</title>
 </head>
 <body>
-    <h1>Illustration</h1>
+    <body>
+        <div class="mainnav">
+            <a href="about/index.html">About</a>
+            <a href="../../index.html">Home</a>
+            <a href="#" style="float: left;">Yuan Shen</a>
+        </div>
+        <div class="header">
+            <h1>Illustration</h1> 
+            <p>A series of analog paintings I made using arcrylic and sand.</p>
+        </div>
+        <div class="images">
+            <div class="one reveal">
+                <img src="../../assets/images/closeup1.jpg" alt="mockup 3 stacked">
+                <p>Close up of one of my paintings. Work in progress.</p>
+            </div>
+            <div class="two reveal">
+                <img src="https://picsum.photos/id/20/1200/800" alt="survey">
+                <p>Close up of one of my paintings.</p>
+            </div>
+            <div class="three reveal">
+                <img src="https://picsum.photos/id/20/1200/800" alt="profile page">
+                <p>Close up of one of my paintings.</p>
+            </div>
+        </div>
+
+        
+        
+        <script type="text/javascript">
+            window.addEventListener('scroll', reveal);
+    
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal')
+    
+            for(var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+    
+                if(revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute
+        })
+        </script>
 </body>
 </html>

@@ -12,54 +12,61 @@
      padding-left: 10rem;
      padding-top: 5rem;
      display: flex;
+     flex-wrap: wrap;
  }
  h1 {
      color: lightgrey;
      font-family: 'Libre Baskerville', serif;
      font-size: 4rem;
+     flex: 50%;
  }
 
  .header p {
      color: lightgrey;
      font-family: 'Libre Baskerville', serif;
      padding-top: 10rem;
-     font-size: 1.5rem;
+     font-size: 2rem;
      line-height: 3rem;
+     flex:50%;
 
  }
 
- @media screen and (max-width: 800px) {
+ @media screen and (max-width: 1200px) {
      .header {
-         display: block;
+         display: flex;
+         width: 600px;
      }
      h1 {
          height: 100px;
+         width: 500px;
          font-size: 3rem;
+         flex:100%;
      }
 
      .two{
          position: absolute;
-         left: 0
-         ;
+         left: 0;
+         flex: 100%
      }
      
  }
 
-@media (max-width:400px) {
+@media (max-width:600px) {
     .header {
         display: block;
         width: 300px;
         padding-left: 80px;
     }
     h1 {
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .header p {
-        font-size: 1rem;
+        font-size: 2rem;
         padding-top: 0;
         width: 300px;
     }
 }
+
  .mainnav a {
     text-decoration: none;
     color: rgb(186, 186, 186);
@@ -78,41 +85,31 @@
       color: lightgrey;
       font-family: 'Libre Baskerville', serif;
       line-height: 2rem;
-      width: 30rem;
+     
   }
 
- .one {
-     position: relative;
-     top: 25rem;
-     left: 10rem;
-     width: fit-content;
- }
+  .images {
+      padding-top: 20rem;
+      max-width: 1000px;
+      margin:auto;  
+      
+  }
 
- .one img {
-     width: 500px;
-     height: 500px;
- }
+  .images div {
+      padding: 5rem;
+  }
 
- .two {
-     position: relative;
-     top: 40rem;
-     left: 40rem;
-     width: 1200px;
-     
- }
- .two img {
-     width: 60%;
-     height: 60%
- }
+  .images img {
+      width: 100%;
+      max-width: 1000px;
+      min-width: 300px;
+  }
 
- .three {
-     position: relative;
-     top: 50rem;
- }
- .three img {
-     width: 700px;
-     height: 500px;
- }
+  .images p {
+      font-size: 1.5em;
+      word-wrap: break-word;
+      line-height: 3rem;
+  }
 
 .reveal {
     position: relative;
@@ -126,3 +123,19 @@
     transform: translateY(0px);
     opacity: 1;
 }
+
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 80%);
+    display: none;
+  }
+  
+  #lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

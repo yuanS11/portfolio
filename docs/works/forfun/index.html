@@ -5,17 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="../collage/script.js"></script>
     <title>For Fun</title>
 </head>
 <body>
-    <div class="mainnav">
-        <a href="about/index.html">About</a>
-        <a href="../../index.html">Home</a>
-    </div>
-
-    <div class="header">
-        <h1>For Fun</h1> 
-        <p>A series of graphic design works I made judt for fun.</p>
-    </div>
+    <body>
+        <div class="mainnav">
+            <a href="about/index.html">About</a>
+            <a href="../../index.html">Home</a>
+            <a href="#" style="float: left;">Yuan Shen</a>
+        </div>
+        <div class="header">
+            <h1>For Fun</h1> 
+            <p>A series of graphic designs I made just for fun.</p>
+        </div>
+        <div class="images">
+            <div class="one reveal">
+                <img src="../../assets/images/cd_cover.jpg" alt="mockup 3 stacked">
+                <p>Vinyl Record cover.</p>
+            </div>
+            <div class="two reveal">
+                <img src="../../assets/images/pink_poster.jpg" alt="survey">
+                <p>Poster I made with an image of Oil drops.</p>
+            </div>
+            <div class="three reveal">
+                <img src="../../assets/images/air_poster.jpg" alt="profile page">
+                <p>Poster project for exhibition at the Art Institute.</p>
+            </div>
+            <div class="three reveal">
+                <img src="../../assets/images/id_mockup.jpg" alt="profile page">
+                <p>My identity system I designed.</p>
+            </div>
+    
+        </div>
+        
+        <script type="text/javascript">
+            window.addEventListener('scroll', reveal);
+    
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal')
+    
+            for(var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+    
+                if(revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        </script>
 </body>
 </html>

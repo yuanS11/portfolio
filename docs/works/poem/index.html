@@ -5,9 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Poem</title>
 </head>
 <body>
-    <h1>Poem</h1>
+    <div class="mainnav">
+        <a href="about/index.html">About</a>
+        <a href="../../index.html">Home</a>
+        <a href="#" style="float: left;">Yuan Shen</a>
+    </div>
+    <div class="header">
+        <h1>Poetry</h1> 
+        <p>A series of blackout poetries I created. The original text is from the History of Sexuality by Michel Foucault.</p>
+    </div>
+    <div class="images">
+        <div class="one reveal">
+            <img src="../../assets/images/fear.jpg" alt="fear">
+            <p>Perhaps fear has been the reason to free ourselves, for timidity is repression.</p>
+        </div>
+        <div class="two reveal">
+            <img src="../../assets/images/invalidation.jpg" alt="invalidation">
+            <p>I was formed in the forms of invalidation.</p>
+        </div>
+        <div class="three reveal">
+            <img src="../../assets/images/moral.jpg" alt="profile page">
+            <p>We set out in search of our broken moral confession.</p>
+        </div>
+        <div class="three reveal">
+            <img src="../../assets/images/narration.jpg" alt="profile page">
+            <p>Your words plot the scandalous narration decorated with passion.</p>
+        </div>
+        <div class="three reveal">
+            <img src="../../assets/images/love.jpg" alt="profile page">
+            <p>But love cannot be tied to reasons.</p>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal')
+
+        for(var i = 0; i < reveals.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+            }
+            else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    </script>
 </body>
 </html>
